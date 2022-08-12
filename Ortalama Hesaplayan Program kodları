@@ -1,0 +1,52 @@
+import timer
+liste1 = []
+liste2 = []
+def çıkış():
+    exit()
+print("Ortalama Hesaplayan Program")
+time.sleep(0.32)
+while True:
+    b = 0
+    ders_sayısı = input("Kaç Adet Ders Gireceksiniz Yazınız(Programı Bitirmek İstiyorsanız (Bitir)Yazınız)")
+    ders_sayısı.upper()
+    if ders_sayısı == ("Bitir"):    
+        break
+        çıkış()   
+    try:
+        ders_sayısı = int(ders_sayısı)
+    except:
+        ders_agırlıgı = 0
+        ders_notu = 0 
+        ders_sayısı = 0
+    if ders_sayısı == int(ders_sayısı):
+        for i in range(ders_sayısı):
+            ders_agırlıgı = input("Ders Ağırlığını Giriniz(Haftada Kaç Saat O Dersi Görüyorsanız)")
+            try:
+                ders_agırlıgı = int(ders_agırlıgı)
+            except:
+                ders_agırlıgı = 0
+                ders_notu = 0 
+                ders_sayısı = 0         
+            ders_notu = input("Ders Notunu Giriniz")
+
+            try:
+                ders_notu = int(ders_notu)
+            except:
+                ders_agırlıgı = 0
+                ders_notu = 0 
+                ders_sayısı = 0
+            if (ders_agırlıgı == int(ders_agırlıgı)) and (ders_notu == int(ders_notu)):
+                r = ders_agırlıgı*ders_notu
+                b = b + 1
+                liste1.append(r)
+                liste2.append(ders_agırlıgı)        
+                if b == ders_sayısı:
+                    toplam1 = 0
+                    toplam2 = 0
+                    for ele in range(0, len(liste1)): 
+                        toplam1 = toplam1 + liste1[ele]
+                    for ele in range(0,len(liste2)):
+                        toplam2 = toplam2 + liste2[ele]
+                    s = toplam1/toplam2
+                    print(s)
+                    #b Sayısını döndürmek için kullandım
